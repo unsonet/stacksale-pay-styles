@@ -1,0 +1,46 @@
+{
+  "name": "securepay-styles",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/securepay-styles/src",
+  "projectType": "library",
+  "release": {
+    "version": {
+      "currentVersionResolver": "git-tag",
+      "fallbackCurrentVersionResolver": "disk",
+      "preserveLocalDependencyProtocols": false,
+      "manifestRootsToUpdate": ["dist/{projectRoot}"]
+    }
+  },
+  "tags": [],
+  "targets": {
+    "build-tsc": {
+      "executor": "@nx/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/libs/securepay-styles",
+        "main": "libs/securepay-styles/src/index.ts",
+        "tsConfig": "libs/securepay-styles/tsconfig.lib.json",
+        "assets": [
+          "libs/securepay-styles/*.md",
+          {
+            "input": "libs/securepay-styles/src",
+            "glob": "**/*.scss",
+            "output": "."
+          }
+        ]
+      }
+    },
+    "build": {
+      "executor": "nx:run-commands",
+      "outputs": ["{workspaceRoot}/dist/libs/securepay-styles"],
+      "options": {
+        "command": "shx cp -r libs/securepay-styles/src dist/libs/securepay-styles"
+      }
+    },
+    "nx-release-publish": {
+      "options": {
+        "packageRoot": "dist/{projectRoot}"
+      }
+    }
+  }
+}
