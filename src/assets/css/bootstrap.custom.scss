@@ -45,13 +45,13 @@
 .card {
     margin-bottom: 20px;
     background-color: #fff;
-    border: 1px solid transparent;
+    // border: 1px solid transparent;
     border-radius: 4px;
     box-shadow: 0 1px 1px #0000000d;
 }
 .card-header {
     padding: 10px 15px;
-    border-bottom: 1px solid transparent;
+    // border-bottom: 1px solid transparent;
     border-top-left-radius: 3px;
     border-top-right-radius: 3px;
 }
@@ -93,9 +93,11 @@
 .panel-dark .nav-tabs a:hover {
     color: #999;
 }
-.panel-dark>.panel-heading {
+.panel-dark>.panel-heading, 
+.panel-dark>.card-header 
+{
     background-image: linear-gradient(to bottom, #c6c6c6 0, #606060);
-    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr="#ffc6c6c6",endColorstr="#ff606060",GradientType=0);
+    // filter: progid: DXImageTransform.Microsoft.gradient(startColorstr="#ffc6c6c6",endColorstr="#ff606060",GradientType=0);
     background-repeat: repeat-x;
     color: #fff;
     background-color: #c6c6c6;

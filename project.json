@@ -1,7 +1,7 @@
 {
-  "name": "securepay-styles",
+  "name": "stacksale-pay-styles",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "libs/securepay-styles/src",
+  "sourceRoot": "libs/stacksale-pay-styles/src",
   "projectType": "library",
   "release": {
     "version": {
@@ -17,13 +17,13 @@
       "executor": "@nx/js:tsc",
       "outputs": ["{options.outputPath}"],
       "options": {
-        "outputPath": "dist/libs/securepay-styles",
-        "main": "libs/securepay-styles/src/index.ts",
-        "tsConfig": "libs/securepay-styles/tsconfig.lib.json",
+        "outputPath": "dist/libs/stacksale-pay-styles",
+        "main": "libs/stacksale-pay-styles/src/index.ts",
+        "tsConfig": "libs/stacksale-pay-styles/tsconfig.lib.json",
         "assets": [
-          "libs/securepay-styles/*.md",
+          "libs/stacksale-pay-styles/*.md",
           {
-            "input": "libs/securepay-styles/src",
+            "input": "libs/stacksale-pay-styles/src",
             "glob": "**/*.scss",
             "output": "."
           }
@@ -32,9 +32,9 @@
     },
     "build": {
       "executor": "nx:run-commands",
-      "outputs": ["{workspaceRoot}/dist/libs/securepay-styles"],
+      "outputs": ["{workspaceRoot}/dist/libs/stacksale-pay-styles"],
       "options": {
-        "command": "shx cp -r libs/securepay-styles/src dist/libs/securepay-styles"
+        "command": "shx cp -r libs/stacksale-pay-styles/src dist/libs/stacksale-pay-styles"
       }
     },
     "nx-release-publish": {
